@@ -22,7 +22,6 @@ All experiments use rigorous methodology with multiple random seeds (42, 123, 45
 ```text
 A2C-RL-Multi-Agent/
 ├── rl-project.ipynb              Main notebook with all code
-├── rl-project-original.ipynb    Backup of original notebook
 │
 ├── src/                          Utility scripts (6 files)
 │   ├── config.py                 Hyperparameters and configuration
@@ -186,29 +185,6 @@ After training, you should observe:
 
 **Q4**: Why can we increase learning rate with K×n scaling?  
 **A**: Batch size = 36 → gradient variance ↓ by ~36×, allowing lr ↑ without divergence.
-
-## 📦 Academic Submission
-
-The submission package should include:
-
-```text
-Project-G_GroupNumber-S1_Name1-S2_Name2.zip
-├── rl-project.ipynb          Main notebook with all code and results
-├── src/                      Core utilities package (6 modules)
-├── training/                 Training scripts (5 agents)
-├── requirements.txt          Python dependencies
-├── README.md                 Project documentation
-└── agent{0-4}_logs/          Pre-computed results (optional)
-```
-
-### Video Presentation (Required)
-
-Create a 5-minute video walkthrough covering:
-
-1. **Project Overview** (1 min): Explain the 5 agents and research questions
-2. **Code Walkthrough** (2 min): Show key implementation details
-3. **Results** (1.5 min): Present plots and explain findings
-4. **Interesting Discovery** (0.5 min): Highlight most interesting finding
 
 ## 📊 Key Features
 
