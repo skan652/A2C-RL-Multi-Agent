@@ -63,8 +63,7 @@ def train_agent2(seed: int, log_dir: Path, K: int = 6) -> Dict:
         obs_t = torch.FloatTensor(obs).to(device)
 
         # Actor: Sample actions for all K environments
-        with torch.no_grad():
-            logits = actor(obs_t)
+        logits = actor(obs_t)
         dist = torch.distributions.Categorical(logits=logits)
         actions = dist.sample()
         log_probs = dist.log_prob(actions)
