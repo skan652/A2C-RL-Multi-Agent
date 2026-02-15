@@ -112,7 +112,7 @@ def train_agent3(seed: int, log_dir: Path, n_steps: int = 6) -> Dict:
             actor_opt.zero_grad()
             actor_loss = -(advantages.detach() * log_probs_t).mean()
             # Entropy bonus (approximate from last distribution)
-            actor_loss -= ENT_COEF * dist.entropy()
+            actor_loss -= ENT_COEF * dist.entropy().mean()
             actor_loss.backward()
             actor_opt.step()
 
